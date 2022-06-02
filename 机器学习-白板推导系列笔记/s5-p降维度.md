@@ -38,7 +38,31 @@ $=\frac{1}{N}[X^{T}- \vec{\overline{x}}I_{1,N}][X^{T}- \vec{\overline{x}}I_{1,N}
 
 $=\frac{1}{N}[X^{T}- \frac{1}{N}X^TI_{N, 1}I_{1,N}][X^{T}- \frac{1}{N}X^TI_{N, 1}I_{1,N}]^T$
 
-=\frac{1}{N}(x_1-\overline{x},x_2-\overline{x},\cdots,x_N-\overline{x})(x_1-\overline{x},x_2-\overline{x},\cdots,x_N-\overline{x})^T\nonumber\ &=\frac{1}{N}(X^T-\frac{1}{N}X^T\mathbb{I}{N1}\mathbb{I}{N1}^T)(X^T-\frac{1}{N}X^T\mathbb{I}{N1}\mathbb{I}{N1}^T)^T\nonumber\ &=\frac{1}{N}X^T(E_N-\frac{1}{N}\mathbb{I}{N1}\mathbb{I}{1N})(E_N-\frac{1}{N}\mathbb{I}{N1}\mathbb{I}{1N})^TX\nonumber\ &=\frac{1}{N}X^TH_NH_N^TX\nonumber\ &=\frac{1}{N}X^TH_NH_NX=\frac{1}{N}X^THX \end $
+$=\frac{1}{N}[X^{T}(E_n- \frac{1}{N}I_{N, 1}I_{1,N})][X^{T}(E_n- \frac{1}{N}I_{N, 1}I_{1,N})]^T$
 
-$\vec{\bar{x}}=$
+$=\frac{1}{N}[X^{T}(E_n- \frac{1}{N}I_{N, 1}I_{1,N})] [(E_n- \frac{1}{N}I_{N, 1}I_{1,N})]^T(X^{T})^{T}$
 
+$=\frac{1}{N}X^{T}(E_n- \frac{1}{N}I_{N, 1}I_{1,N})(E_n- \frac{1}{N}I_{N, 1}I_{1,N})^TX$
+
+
+令 $H_{n \times n}=(E_n- \frac{1}{N}I_{N, 1}I_{1,N})$
+则
+
+$S=\frac{1}{N}X^{T}(E_n- \frac{1}{N}I_{N, 1}I_{1,N})(E_n- \frac{1}{N}I_{N, 1}I_{1,N})^TX$
+
+$=\frac{1}{N}X^{T}H_{n \times n}H_{n \times n}^TX$
+
+
+
+注意：
+
+
+$H_{n \times n}=H_{n \times n}^T$
+
+证明：
+ $H_{n \times n}^T=(E_n- \frac{1}{N}I_{N, 1}I_{1,N})^T$
+
+ $=E_n- \frac{1}{N}I_{1,N}^TI_{N, 1}$^T
+
+ $= E_n- \frac{1}{N}I_{N, 1}I_{1,N}$
+ $= H_{n \times n}$
