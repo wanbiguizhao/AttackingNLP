@@ -56,6 +56,8 @@ $=\frac{1}{N}X^{T}H_{n \times n}H_{n \times n}^TX$
 
 注意：
 
+------
+
 
 $H_{n \times n}=H_{n \times n}^T$
 
@@ -66,3 +68,18 @@ $H_{n \times n}=H_{n \times n}^T$
 
  $= E_n- \frac{1}{N}I_{N, 1}I_{1,N}$
  $= H_{n \times n}$
+
+----
+
+$H_{n \times n} H_{n \times n}=H_{n \times n}$
+
+证明：
+$H_{n \times n} H_{n \times n}$
+
+$=(E_n- \frac{1}{N}I_{N, 1}I_{1,N})(E_n- \frac{1}{N}I_{N, 1}I_{1,N}) $
+
+$=E_nE_n- \frac{1}{N}E_nI_{N, 1}I_{1,N}-\frac{1}{N}I_{N, 1}I_{1,N}E_n+ \frac{1}{N^2}I_{N, 1}I_{1,N}I_{N, 1}I_{1,N} $
+
+$=E_n- \frac{2}{N}I_{N, 1}I_{1,N}+ \frac{1}{N^2}I_{N, 1} \cdot  N\cdot I_{1,N} $
+
+$=E_n- \frac{1}{N}I_{N, 1}I_{1,N}$
