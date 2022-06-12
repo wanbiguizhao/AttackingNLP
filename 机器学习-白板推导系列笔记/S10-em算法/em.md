@@ -38,7 +38,7 @@ $\begin{equation}\begin{aligned}
 &=\log p(\vec{x}|\vec{\theta}) 
 \end{aligned}
 \end{equation}
-$
+$fn
 
 右边的公式积分:
 $\begin{equation}\begin{aligned}

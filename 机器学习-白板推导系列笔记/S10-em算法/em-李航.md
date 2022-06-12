@@ -80,7 +80,7 @@ $
 \begin{aligned}\\
 &\sum_z logP(Y,Z|\theta)P(Z|Y,\theta^{(i)})\\
 &=\prod_{i}^n\log p(y_i,z_1,z_2,..zn=0,0,\cdots,0|\theta) \cdot \prod_{i}^np(z_1,z_2,..zn=0,0,\cdots,0|y_i,\theta^t) + \prod_{i}^n\log p(y_i,z_1,z_2,..zn=1,0,\cdots,0|\theta) \cdot \prod_{i}^np(z_1,z_2,..zn=1,0,\cdots,0|y_i,\theta^t) + \cdots +  \prod_{i}^n\log p(y_i,z_1,z_2,..zn=1,1,\cdots,1|\theta) \cdot \prod_{i}^np(z_1,z_2,..zn=1,1,\cdots,1|y_i,\theta^t) 有2^n的和 \\
-&=\log\sum_{i}^np(y_i,z_i=0|\theta) \cdot \prod_{i}^np(z_i=0|y_i,\theta^t) + \log\sum_{i}^np(y_i,z_i=1|\theta) \cdot \prod_{i}^np(z_i=1|y_i,\theta^t)
+&=\log\sum_{i}^np(y_i,z_1,z_2,..zn=0,0,\cdots,0|\theta) \cdot \prod_{i}^np(z_1,z_2,..zn=0,0,\cdots,0|y_i,\theta^t) +...+ \log\sum_{i}^np(y_i,z_1,z_2,..zn=1,1,\cdots,1|\theta) \cdot \prod_{i}^np(z_1,z_2,..zn=1,1,\cdots,1|y_i,\theta^t)
 \end{aligned}
 \end{equation}
 $
