@@ -94,14 +94,15 @@ $
 $
 \begin{equation}
 \begin{aligned}
-p(y|\theta)\\
+&p(y|\theta)\\
 &=\pi^y(1-p)^{1-y}+(1-\pi)q^y(1-q)^{1-y}
 \end{aligned}
 \end{equation}
 $
 
 ### z的边缘概率分布
-$p(z|y,\theta)=\frac {p(y,z|\theta)}{p(y|\theta)} $
+
+
 
 $
 \begin{equation}
@@ -147,8 +148,7 @@ $
 \end{aligned}
 \end{equation}
 $
-$\vec{Z}=(z_1,z_2,...,z_n)^T $ 表示 
-$Ez[logP(Y,Z|\theta)P(Z|Y,\theta^{(i)})]中 Z的可能序列(n个0或者1组成的序列),序列个数为2^n个$ 当n=10时，$E_z$共计有1024项求和. 
+$\vec{Z}=(z_1,z_2,...,z_n)^T $ 表示 $Ez[logP(Y,Z|\theta)P(Z|Y,\theta^{(i)})]中 Z的可能序列(n个0或者1组成的序列),序列个数为2^n个$ 当n=10时，$E_z$共计有1024项求和. 
 
 ```
 当前遇到的问题是
