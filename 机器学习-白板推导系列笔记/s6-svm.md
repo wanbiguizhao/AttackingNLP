@@ -23,3 +23,7 @@ $\vec{x}_k,y_{k}，\lambda_{i}$如何找到呢？
 从$R^n$到$R^m$的映射$\vec{x}_{n\times 1}\rightarrow A_{m \times n}\vec{x}_{n\times 1}+\vec{b}_{m \times 1}$，称为仿射变换，当m=1是，称上述的仿射变换为仿射函数。
 
 # 指示函数
+
+
+# 代码测试
+可以使用高斯分布，生成一些数据，然后进行分类工作。
