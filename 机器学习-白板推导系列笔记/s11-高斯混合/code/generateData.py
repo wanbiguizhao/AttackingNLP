@@ -39,11 +39,12 @@ def getData():
     cov2 = np.mat("0.2 0 0;0 0.3 0;0 0 0.15 ")# 协方差矩阵
     mu1 = np.array([1.1, 0.5, 0.25])
     mu2 = np.array([2.5, 1.2, 0.05])
-    K1 = np.zeros((100, 3))
-    K2 = np.zeros((100,3))
-    K1 = np.random.multivariate_normal(mean=mu1, cov=cov1, size=100)
+    K1 = np.zeros((100, 4))
+    K2 = np.zeros((100,4))
+    K1 = np.random.multivariate_normal(mean=mu1, cov=cov1, size=100) # 这里紧紧给出了采样的值。
     K2 = np.random.multivariate_normal(mean=mu2, cov=cov2, size=100)
-    MData=0.3*K1+0.7*K2 
+    #MData=np.zeros((0,3))
+    MData=np.append(K1,K2,axis=0)  # 这个值是不正确的，还应该计算出概率密度的值。
     if DEBUG:
         fig = plt.figure()
         ax = plt.axes(projection='3d')

@@ -33,10 +33,10 @@ category = gamma.argmax(axis=1).flatten().tolist()[0]
 # 将每个样本放入对应类别的列表中
 class1 = np.array([X[i] for i in range(N) if category[i] == 0])
 class2 = np.array([X[i] for i in range(N) if category[i] == 1])
-
+ax = plt.axes(projection='3d')
 # 绘制聚类结果
-plt.plot(class1[:, 0], class1[:, 1], 'rs', label="class1")
-plt.plot(class2[:, 0], class2[:, 1], 'bo', label="class2")
+plt.plot(class1[:, 0], class1[:, 1], class1[:, 2], 'rs', label="class1")
+plt.plot(class2[:, 0], class2[:, 1],class2[:, 2], 'bo', label="class2")
 plt.legend(loc="best")
 plt.title("GMM Clustering By EM Algorithm")
 plt.show()
