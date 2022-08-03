@@ -1,5 +1,5 @@
 import torch 
-from torch import Tensor,nn
+from torch import Tensor, conv2d,nn
 # from d2l import torch as d2l 
 
 def corr2d(X:Tensor,K:Tensor):
@@ -31,12 +31,34 @@ def test_01():
     K = torch.tensor([[1.0,-1.0]])
     Y=corr2d(X,K)
     print(Y)
-    X[2:5,:]=0
+    
+
+def kernel():
+    X=torch.ones((6,8))
+    X[:,2:6]=0
+    K=torch.tensor([[1.0,-1.0]])
     Y=corr2d(X,K)
-    print(Y)    
+    X=X.reshape((1,1,6,8))
+    Y=Y.reshape((1,1,6,7))
+    lr=3e-2 
+    torchConv2d = nn.Conv2d(1,1, kernel_size=(1, 2), bias=False)
+
+    for i in range(10):
+        Y_hat = torchConv2d(X) 
+        loss=(Y_hat-Y)**2 
+        torchConv2d.zero_grad()
+        torchConv2d.zero_grad()
+        loss.sum().backward()
+
+        torchConv2d.weight.data[:]-=lr*torchConv2d.weight.grad # 学习了卷积核，但是没有学习了 偏执bias。
+        if (i+1)%2==0:
+            print(f'epoch {i+1} , loss {loss.sum():.3f}')
+    print(torchConv2d.weight.reshape((1,2)))
+
 
 
 if __name__=="__main__":
     #show_relu()
     test_corr2d()
     test_01()
+    kernel()
